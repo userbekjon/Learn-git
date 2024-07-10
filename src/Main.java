@@ -6,7 +6,7 @@ public class Main {
         int a= scanner.nextInt();
         int b= scanner.nextInt();
         System.out.println(ekuk(a,b));
-
+        evenNumbers(10);
     }
 
     public static  int ekuk(int a, int b){
@@ -20,4 +20,21 @@ public class Main {
          }
          return kopaytma/a;
     }
+
+    public static void evenNumbers(int num) {
+        int count = 0;
+        for (int i = 2; i < num; i++) {
+            for (int j = 2; j <= Math.sqrt(i); j++) {
+                if(i % j == 0){
+                    count++;
+                    break;
+                }
+            }
+            if (count == 0){
+                System.out.println(i);
+            }
+                count = 0;
+        }
+    }
+
 }

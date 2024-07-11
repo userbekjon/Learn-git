@@ -2,11 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int a= scanner.nextInt();
-        int b= scanner.nextInt();
-        System.out.println(ekuk(a,b));
-        evenNumbers(10);
+       
+    }
+
+    public static int Ekub(int a, int b){
+        while(a!=b){
+            if(a>b){
+                a=a-b;
+            } else{
+                a = b-a;
+            }
+        }
+        return a;
+
     }
 
     public static  int ekuk(int a, int b){
